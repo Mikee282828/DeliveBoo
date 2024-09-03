@@ -49,7 +49,7 @@
 
 			<div class="mb-3">
 				<label for="img" class="form-label"></label>
-				<input type="file" class="form-control" name="img" value="{{ old('img') }}" required>
+				<input type="file" class="form-control" name="img" value="{{ old('img') }}" accept=".png, .jpg, .jpeg">
 				@error('img')
 					<div class="form-text text-danger">{{ $message }}</div>
 				@enderror
@@ -59,7 +59,6 @@
 				<label for="category_id" class="form-label">{{ $item->name }}</label>
 				<input type="checkbox" class="form-check-input" name="category_id[]" value="{{ $item->id }}">
 			@endforeach
-
 
 			<button type="submit" class="btn btn-outline-primary">Invia Nuovo Progetto</button>
 		</form>
